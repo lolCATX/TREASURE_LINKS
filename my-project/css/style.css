@@ -1,14 +1,22 @@
+@font-face {
+  font-family: 'Lumiare';
+  src: url('../fonts/Lumiare.woff2') format('woff2'),
+       url('../fonts/Lumiare.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
   background-image:
-    radial-gradient(circle at center, transparent 0%, #d1b8de 50%, #0a0a0a 100%),
-    url('../images/local2.jpg');
+    radial-gradient(circle at center, transparent 0%, #2d2c2d 50%, #080808 100%),
+    url('../images/background1.jpg');
   background-size: cover, cover;
   background-position: center, center;
   background-repeat: no-repeat, no-repeat;
 }
-
 
 .navbar {
 background-image:
@@ -33,6 +41,7 @@ mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
 .navbar h1 {
   font-size: 20px;
   margin: 0;
+  font-family: 'Lumiare', cursive;
 }
 
 .hero-row {
@@ -115,12 +124,22 @@ mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
 
 .hero-title {
   flex: 1;
+  font-family: 'Lumiare', cursive;
   padding-left: 40px;
+  margin-left: auto;
+  text-align: center;
 }
 
 .hero-title h2 {
-  font-size: 36px;
+  font-size: 150px;
   margin: 0;
+  background-image: url('../images/fontplacer2.jpg');
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 2px white;
 }
 
 .apps-section {
