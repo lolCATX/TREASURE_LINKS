@@ -21,10 +21,10 @@
 
 .hero-row {
   width: 100%;
-  min-height: 400px;       /* controls the vertical space of this row */
+  min-height: 400px;       
   display: flex;
-  align-items: center;     /* centers the square vertically in this row */
-  justify-content: flex-start; /* pushes it to the left */
+  align-items: center;     
+  justify-content: flex-start; 
   padding: 0 40px;
   box-sizing: border-box;
 }
@@ -33,12 +33,18 @@
   position: relative;
   width: 300px;
   height: 300px;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  perspective: 1000px;
 }
 
 .carousel-track {
+  align-items: center;
+  gap: 16px;
+  transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform: translateX(0);
+  transform-style: preserve-3d;
   width: 100%;
   height: 100%;
   position: relative;
@@ -48,15 +54,19 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+  border-radius: 8px;
+  backface-visibility: hidden;
+  opacity: 0.6;
+  transform-origin: center center;
+  transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 .slide.active {
   opacity: 1;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .carousel-dots {
