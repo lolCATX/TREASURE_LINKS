@@ -4,6 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('loadingText').textContent = 'Tap to enter';
 }, 2000);
 
+  setTimeout(() => {
+  document.querySelector('.bg-video').classList.add('active');
+  clearInterval(timer);
+}, 10000);
+  const bgVideo = document.querySelector('.bg-video');
+  bgVideo.classList.add('active');
+  bgVideo.play();
+
 document.getElementById('loadingOverlay').addEventListener('click', () => {
   document.getElementById('bgMusic').play();
   document.getElementById('loadingOverlay').style.display = 'none';
