@@ -187,6 +187,32 @@ mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
   -webkit-text-stroke: 2px white;
 }
 
+.made-by-tag {
+  font-family: 'Lumiare', cursive;
+  color: #ccc;
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  opacity: 0;
+  animation: fadeMadeBy 6s ease-in-out forwards;
+}
+
+.fade-title {
+  opacity: 0;
+  animation: fadeTitle 6s ease-in-out forwards;
+  animation-delay: 6s;
+}
+
+@keyframes fadeMadeBy {
+  0%   { opacity: 0; }
+  50%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeTitle {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 .apps-section {
   padding: 40px;
 }

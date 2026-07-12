@@ -4,10 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('loadingText').textContent = 'Tap to enter';
 }, 2000);
 
-  setTimeout(() => {
-  document.querySelector('.bg-video').classList.add('active');
-  clearInterval(timer);
-}, 10000);
   const bgVideo = document.querySelector('.bg-video');
   bgVideo.classList.add('active');
   bgVideo.play();
