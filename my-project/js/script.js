@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+  document.querySelector('.spinner').style.display = 'none';
+  document.getElementById('loadingText').textContent = 'Tap to enter';
+}, 2000);
+
+document.getElementById('loadingOverlay').addEventListener('click', () => {
+  document.getElementById('bgMusic').play();
+  document.getElementById('loadingOverlay').style.display = 'none';
+});
   const slides = document.querySelectorAll('.square-carousel .slide');
   const dots = document.querySelectorAll('.square-carousel .dot');
   let current = 0;
